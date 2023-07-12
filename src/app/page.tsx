@@ -2,7 +2,7 @@
 import { Post } from "./components/post";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
