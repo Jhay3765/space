@@ -7,7 +7,7 @@ type Props = {
 export const Post = ({ children }: Props) => {
   const ref = useRef<HTMLParagraphElement>(null);
   const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
-  console.log(isInView);
+
   return (
     <div
       ref={ref}

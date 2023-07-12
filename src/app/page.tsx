@@ -59,29 +59,12 @@ export default function Home() {
           style={{ scaleX }}
         />
       </nav>
-      <div className="absolute opacity-25  flex  h-screen w-[100%]">
+      <div className="opacity-25  flex  h-screen w-[100%]">
         <Image src="/sparkle.gif" alt="sparkles" width={1000} height={1000} />
         <Image src="/sparkle.gif" alt="sparkles" width={1000} height={1000} />
       </div>
-      <>
-        <style jsx>{`
-          .hero {
-            height: 100vh;
-            width: 100%;
-            opacity: 10%;
-            background-image: radial-gradient(
-              circle farthest-side at var(--x, 100px) var(--y, 100px),
-              #1250aa 50%,
-              transparent 100%
-            );
-          }
-        `}</style>
-        <div ref={heroRef} className="hero">
-          <p className="title"></p>
-        </div>
-      </>
-      <div></div>
-      <h1 className=" px-8 text-8xl sticky bottom-60  py-4 font-thin">
+
+      <h1 className="ml-12 text-8xl sticky bottom-60  py-4 font-thin max-w-6xl">
         Take a <span className="font-normal">Journey </span>Through our
         <span className="font-normal"> Planets </span>
       </h1>
@@ -112,7 +95,11 @@ export default function Home() {
           <Post>
             <h1 className=" text-3xl ">FUN FACT</h1>
             <p className="font-bold py-8 ">
-              Mercury is hot, but not too hot for ice .
+              Despite being the closest planet to the Sun, Mercury is not the
+              hottest planet. Its thin atmosphere can't retain heat, causing
+              extreme temperature fluctuations. It has the greatest temperature
+              difference of any planet, swinging from scorching hot during the
+              day to freezing cold at night.
             </p>
           </Post>
         </div>
@@ -146,7 +133,11 @@ export default function Home() {
             <div className="py-14">
               <h1 className=" text-3xl ">FUN FACT</h1>
               <p className="font-bold py-8 ">
-                Venus doesn’t have any moons, and we aren’t sure why.
+                Venus is often called Earth's "sister planet" due to its similar
+                size, gravity, and composition. However, it has a hostile
+                environment with a thick atmosphere composed mainly of carbon
+                dioxide, causing a runaway greenhouse effect and making it the
+                hottest planet in our solar system.
               </p>
             </div>
           </Post>
@@ -180,8 +171,14 @@ export default function Home() {
           <Post>
             <div className="py-14">
               <h1 className=" text-3xl ">FUN FACT</h1>
-              <p className="font-bold py-8 ">
-                You can see Earth’s magnetic field at work during light shows.
+              <p className="font-bold py-8 leading-10">
+                Earth is home to the highest point above sea level and the
+                deepest point below sea level of any planet in our solar system.
+                Mount Everest, located in the Himalayas, holds the title for the
+                highest point, soaring to an elevation of 8,848 meters (29,029
+                feet). On the other hand, the Mariana Trench in the western
+                Pacific Ocean reaches a staggering depth of 10,924 meters
+                (35,843 feet), making it the lowest point on Earth.
               </p>
             </div>
           </Post>
@@ -211,7 +208,11 @@ export default function Home() {
             <div className="py-14">
               <h1 className=" text-3xl ">FUN FACT</h1>
               <p className="font-bold py-8 ">
-                Mars had a thicker atmosphere in the past.
+                Mars is often referred to as the "Red Planet" because of its
+                rusty reddish appearance. This color comes from iron oxide
+                (rust) present on its surface. Additionally, Mars has the
+                tallest volcano and the deepest, longest canyon in the solar
+                system—Olympus Mons and Valles Marineris, respectively.
               </p>
             </div>
           </Post>
@@ -247,7 +248,12 @@ export default function Home() {
             <div className="py-14">
               <h1 className=" text-3xl ">FUN FACT</h1>
               <p className="font-bold py-8 ">
-                Jupiter is a great comet catcher.
+                Jupiter, the largest planet in our solar system, acts as a
+                cosmic "vacuum cleaner." Its immense gravitational pull attracts
+                and captures numerous asteroids and comets that come into its
+                vicinity, protecting the inner planets like Earth from potential
+                collisions. Jupiter acts as a sort of guardian, helping to
+                shield our planet from space debris.
               </p>
             </div>
           </Post>
@@ -283,7 +289,10 @@ export default function Home() {
             <div className="py-14">
               <h1 className=" text-3xl ">FUN FACT</h1>
               <p className="font-bold py-8 ">
-                No one knows how old Saturn’s rings are .
+                Saturn is famous for its spectacular ring system, consisting of
+                countless particles of ice and rock. These rings extend over
+                280,000 kilometers (175,000 miles) from the planet but are only
+                a few meters thick.
               </p>
             </div>
           </Post>
@@ -319,7 +328,11 @@ export default function Home() {
             <div className="py-14">
               <h1 className=" text-3xl ">FUN FACT</h1>
               <p className="font-bold py-8 ">
-                Uranus is more stormy than we thought.
+                Uranus is an intriguing planet with a unique feature—it rotates
+                on its side. While most planets rotate on an axis roughly
+                perpendicular to their orbits, Uranus spins almost parallel to
+                its orbit, likely due to a collision with a massive object in
+                the past.
               </p>
             </div>
           </Post>
@@ -339,6 +352,7 @@ export default function Home() {
           <Post>
             <p className="font-thin">PLANET 08</p>
             <h1 className="font-bold text-8xl tracking-wider">Neptune</h1>
+
             <p className="font-thin py-8">
               Neptune is the eighth and farthest-known Solar planet from the
               Sun. In the Solar System, it is the fourth-largest planet by
@@ -346,6 +360,7 @@ export default function Home() {
               planet. It is 17 times the mass of Earth and slightly more massive
               than its near-twin Uranus.
             </p>
+
             <div>
               <p>Volume: 6.253 x 10^13 km³</p>
               <p>Mass: 1.02413 x 10^26 kg</p>
@@ -354,9 +369,53 @@ export default function Home() {
           <Post>
             <div className="py-14">
               <h1 className=" text-3xl ">FUN FACT</h1>
-              <p className="font-bold py-8 ">Neptune has supersonic winds.</p>
+              <p className="font-bold py-8 ">
+                {" "}
+                Neptune, the farthest planet from the Sun, has the strongest
+                winds in the solar system. It experiences wind speeds that can
+                reach up to 2,100 kilometers per hour (1,300 miles per hour),
+                making it a planet of powerful storms and weather patterns.
+              </p>
             </div>
           </Post>
+        </div>
+      </section>
+      <section>
+        <h1 className="text-5xl text-center sticky top-20">
+          Honorable Mention:{" "}
+          <span className="font-bold tracking-wider">Pluto</span>
+          <span className="text-base font-thin">09</span>
+        </h1>
+        <div className="flex">
+          <Image
+            src="/planets/pluto.png"
+            alt="pluto"
+            width={800}
+            height={800}
+          />
+
+          <div className="flex flex-col gap-24 justify-center max-w-3xl text-2xl leading-10">
+            <p className="">
+              Pluto, a celestial body that continues to captivate our curiosity
+              and intrigue. Although no longer classified as a planet, Pluto
+              holds a special place in our hearts and serves as a reminder of
+              the vastness and diversity of our solar system.
+            </p>
+            <p>
+              Pluto, once considered the ninth planet, is now categorized as a
+              dwarf planet. Discovered in 1930 by astronomer Clyde Tombaugh,
+              Pluto remained classified as a planet for over seven decades
+              before being reclassified in 2006 by the International
+              Astronomical Union (IAU). Despite its smaller size, Pluto remains
+              a source of wonder and discovery.
+            </p>
+            <Link
+              href="/"
+              className="py-2 px-4 bg-white rounded-xl text-black font-bold self-start"
+            >
+              Return to Top
+            </Link>
+          </div>
         </div>
       </section>
     </main>
