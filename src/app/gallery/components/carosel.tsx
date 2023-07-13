@@ -46,8 +46,11 @@ export function App() {
   }
 
   return (
-    <div className="flex justify-center gap-20 items-center">
-      <button className="text-white" onClick={goToPreviousImage}>
+    <div className="flex  flex-col  sm:flex-row justify-center gap-20 items-center">
+      <button
+        className="text-white  hidden sm:block"
+        onClick={goToPreviousImage}
+      >
         Previous
       </button>
       <div className="w-[600px] h-[600px] relative">
@@ -72,7 +75,18 @@ export function App() {
           />
         </div>
       </div>
-      <button onClick={goToNextImage}>Next</button>
+      <div className=" flex w-full py-4 sm:hidden">
+        <button className="text-white w w-full" onClick={goToPreviousImage}>
+          Previous
+        </button>
+        <button onClick={goToNextImage} className=" w-full">
+          Next
+        </button>
+      </div>
+
+      <button onClick={goToNextImage} className="hidden sm:block">
+        Next
+      </button>
     </div>
   );
 }
