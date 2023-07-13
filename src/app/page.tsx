@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <main className="">
-      <nav className="flex justify-center py-4 sticky top-0 w-full bg-black">
+      <nav className="flex justify-center py-4 sm:sticky top-0 w-full bg-black z-40">
         <div className="flex space-x-4 ">
           <Link
             href="#"
@@ -41,17 +41,10 @@ export default function Home() {
           </Link>
 
           <Link
-            href="#"
+            href="/gallery"
             className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
             Gallery
-          </Link>
-
-          <Link
-            href="#"
-            className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-          >
-            About
           </Link>
         </div>
         <motion.div
@@ -61,16 +54,27 @@ export default function Home() {
       </nav>
       <div className="opacity-25  flex  h-screen w-[100%]">
         <Image src="/sparkle.gif" alt="sparkles" width={1000} height={1000} />
-        <Image src="/sparkle.gif" alt="sparkles" width={1000} height={1000} />
-      </div>
 
-      <h1 className="ml-12 text-8xl sticky bottom-60  py-4 font-thin max-w-6xl">
+        <Image
+          src="/sparkle.gif"
+          alt="sparkles"
+          width={1000}
+          height={1000}
+          className="hidden sm:block"
+        />
+      </div>
+      <h1 className="ml-12 md:text-8xl  text-4xl sm:hidden   absolute  top-48 py-4 font-thin max-w-6xl">
         Take a <span className="font-normal">Journey </span>Through our
         <span className="font-normal"> Planets </span>
       </h1>
 
-      <section className="flex justify-center items-start gap-10  ">
-        <div className=" sticky top-24 -z-40  ">
+      <h1 className="ml-12 md:text-8xl  text-4xl sm:sticky sm:bottom-60  hidden sm:block  py-4 font-thin max-w-6xl">
+        Take a <span className="font-normal">Journey </span>Through our
+        <span className="font-normal"> Planets </span>
+      </h1>
+
+      <section className=" px-10      flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap ">
+        <div className=" sm:sticky top-24   ">
           <Image
             src="/planets/merc.png"
             alt="mercury"
@@ -78,10 +82,12 @@ export default function Home() {
             height={800}
           />
         </div>
-        <div className="flex flex-col justify-center  py-80  ">
+        <div className="flex flex-col justify-center  md:py-80  ">
           <Post>
             <p className=" font-thin ">PLANET 01</p>
-            <h1 className="font-bold text-8xl tracking-wider ">MERCURY</h1>
+            <h1 className="font-bold  md:md:text-8xl  text-4xl  text-4xl   tracking-wider ">
+              MERCURY
+            </h1>
             <p className="font-thin py-8 ">
               Mercury is the smallest planet in the Solar System and the closest
               to the Sun. Its orbit around the Sun takes 87.97 Earth days, the
@@ -105,8 +111,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-start gap-10  ">
-        <div className=" sticky top-24  -z-40 ">
+      <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10    ">
+        <div className=" sm:sticky top-24   ">
           <Image
             src="/planets/venus.png"
             alt="mercury"
@@ -114,10 +120,12 @@ export default function Home() {
             height={800}
           />
         </div>
-        <div className="flex flex-col justify-center  py-80 ">
+        <div className="flex flex-col justify-center  md:py-80 ">
           <Post>
             <p className=" font-thin ">PLANET 02</p>
-            <h1 className="font-bold text-8xl tracking-wider ">Venus</h1>
+            <h1 className="font-bold md:text-8xl  text-4xl tracking-wider ">
+              Venus
+            </h1>
             <p className="font-thin py-8 ">
               Venus is the second planet from the Sun and is named after the
               Roman goddess of love and beauty. As the brightest natural object
@@ -143,8 +151,8 @@ export default function Home() {
           </Post>
         </div>
       </section>
-      <section className="flex justify-center items-start gap-10">
-        <div className="sticky top-24 -z-40">
+      <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10  ">
+        <div className="sm:sticky top-24 ">
           <Image
             src="/planets/earth.png"
             alt="earth"
@@ -152,10 +160,12 @@ export default function Home() {
             height={800}
           />
         </div>
-        <div className="flex flex-col justify-center py-80 ">
+        <div className="flex flex-col justify-center md:py-80 ">
           <Post>
             <p className="font-thin">PLANET 03</p>
-            <h1 className="font-bold text-8xl tracking-wider">Earth</h1>
+            <h1 className="font-bold md:text-8xl  text-4xl tracking-wider">
+              Earth
+            </h1>
             <p className="font-thin py-8">
               Earth is the third planet from the Sun and the only astronomical
               object known to harbor life. While large amounts of water can be
@@ -185,14 +195,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-start gap-10">
-        <div className="sticky top-24 -z-40">
+      <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10  ">
+        <div className="sm:sticky top-24 ">
           <Image src="/planets/mars.png" alt="mars" width={800} height={800} />
         </div>
-        <div className="flex flex-col justify-center py-80 ">
+        <div className="flex flex-col justify-center md:py-80 ">
           <Post>
             <p className="font-thin">PLANET 04</p>
-            <h1 className="font-bold text-8xl tracking-wider">Mars</h1>
+            <h1 className="font-bold md:text-8xl  text-4xl tracking-wider">
+              Mars
+            </h1>
             <p className="font-thin py-8">
               Mars is the fourth planet from the Sun and the second-smallest
               planet in the Solar System, being larger than only Mercury. In
@@ -219,8 +231,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-start gap-10">
-        <div className="sticky top-24 -z-40">
+      <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10  ">
+        <div className="sm:sticky top-24 ">
           <Image
             src="/planets/jupiter.png"
             alt="jupiter"
@@ -228,10 +240,12 @@ export default function Home() {
             height={800}
           />
         </div>
-        <div className="flex flex-col justify-center py-80 ">
+        <div className="flex flex-col justify-center md:py-80 ">
           <Post>
             <p className="font-thin">PLANET 05</p>
-            <h1 className="font-bold text-8xl tracking-wider">Jupiter</h1>
+            <h1 className="font-bold md:text-8xl  text-4xl tracking-wider">
+              Jupiter
+            </h1>
             <p className="font-thin py-8">
               Jupiter is the fifth planet from the Sun and the largest in the
               Solar System. It is a gas giant with a mass more than two and a
@@ -260,8 +274,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-start gap-10">
-        <div className="sticky top-24 -z-40">
+      <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10  ">
+        <div className="sm:sticky top-24 ">
           <Image
             src="/planets/saturnn.png"
             alt="saturn"
@@ -269,10 +283,12 @@ export default function Home() {
             height={800}
           />
         </div>
-        <div className="flex flex-col justify-center py-80 ">
+        <div className="flex flex-col justify-center md:py-80 ">
           <Post>
             <p className="font-thin">PLANET 06</p>
-            <h1 className="font-bold text-8xl tracking-wider">Saturn</h1>
+            <h1 className="font-bold md:text-8xl  text-4xl tracking-wider">
+              Saturn
+            </h1>
             <p className="font-thin py-8">
               Saturn is the sixth planet from the Sun and the second-largest in
               the Solar System, after Jupiter. It is a gas giant with an average
@@ -299,8 +315,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-start gap-10">
-        <div className="sticky top-24 -z-40">
+      <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10  ">
+        <div className="sm:sticky top-24 ">
           <Image
             src="/planets/uranus.png"
             alt="uranus"
@@ -308,10 +324,12 @@ export default function Home() {
             height={800}
           />
         </div>
-        <div className="flex flex-col justify-center py-80 ">
+        <div className="flex flex-col justify-center md:py-80 ">
           <Post>
             <p className="font-thin">PLANET 07</p>
-            <h1 className="font-bold text-8xl tracking-wider">Uranus</h1>
+            <h1 className="font-bold md:text-8xl  text-4xl tracking-wider">
+              Uranus
+            </h1>
             <p className="font-thin py-8">
               Uranus is the seventh planet from the Sun. Its name is a reference
               to the Greek god of the sky, Uranus, who, according to Greek
@@ -339,8 +357,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-center items-start gap-10">
-        <div className="sticky top-24 -z-40">
+      <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10     ">
+        <div className="sm:sticky top-24 ">
           <Image
             src="/planets/neptune.png"
             alt="neptune"
@@ -348,10 +366,12 @@ export default function Home() {
             height={800}
           />
         </div>
-        <div className="flex flex-col justify-center py-80 ">
+        <div className="flex flex-col justify-center md:py-80 ">
           <Post>
             <p className="font-thin">PLANET 08</p>
-            <h1 className="font-bold text-8xl tracking-wider">Neptune</h1>
+            <h1 className="font-bold md:text-8xl  text-4xl tracking-wider">
+              Neptune
+            </h1>
 
             <p className="font-thin py-8">
               Neptune is the eighth and farthest-known Solar planet from the
@@ -380,19 +400,21 @@ export default function Home() {
           </Post>
         </div>
       </section>
-      <section>
-        <h1 className="text-5xl text-center sticky top-20">
+      <section className="px-8 py-8">
+        <h1 className="text-5xl text-center sm:sticky top-20">
           Honorable Mention:{" "}
           <span className="font-bold tracking-wider">Pluto</span>
           <span className="text-base font-thin">09</span>
         </h1>
-        <div className="flex">
-          <Image
-            src="/planets/pluto.png"
-            alt="pluto"
-            width={800}
-            height={800}
-          />
+        <div className="flex flex-wrap">
+          <div>
+            <Image
+              src="/planets/pluto.png"
+              alt="pluto"
+              width={800}
+              height={800}
+            />
+          </div>
 
           <div className="flex flex-col gap-24 justify-center max-w-3xl text-2xl leading-10">
             <p className="">
