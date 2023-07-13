@@ -154,7 +154,7 @@ export default function Home() {
       <section className="flex justify-center items-start gap-10 flex-wrap sm:flex-nowrap px-10  ">
         <div className="sm:sticky top-24 ">
           <Image
-            src="/planets/earth.png"
+            src="/planets/earthh.png"
             alt="earth"
             width={800}
             height={800}
